@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>154879</title>
+    <style>
+        #countdown{
+            font-size: 24px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body style="background-color: azure;">
+    <div style="text-align: center;"><img src="iphone.jpg" style="width:391px;height:260px;">
+        <h1>OLD IPHONE GIVEAWAY</h1>
+    <h2>Giveaway Ends On Thursday, 7 March 2024 At 11:30am</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+        Id aliquet risus feugiat in. Amet purus gravida quis blandit. Nec ultrices dui sapien eget. 
+        Et odio pellentesque diam volutpat commodo sed egestas. Neque gravida in fermentum et sollicitudin ac orci. 
+        Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus et netus</p>
+    </div>
+    <div id="countdown"></div>
+    <script>
+        var countdownDate=newDate("28 Feb, 2024 00:00:00").getTime();
+        var x=setInterval(function() {
+         var now=newDate().getTime();
+         var distance=countdownDate - now;
+         var days=Math.floor(distance/(1000*60*60*24));
+         var hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+         var minutes=Math.floor((distance%(1000*60*60))/(1000*60));
+         var hours=Math.floor(distance%(1000*60))/1000;
+         document.getElementById("countdown").innerHTML=days+"d"+hours+"h"+minutes+"m"+seconds+"s";
+         if (distance<0){
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML="Expired";
+         } 
+        },1000);
+    </script>
+</body>
+</html>
